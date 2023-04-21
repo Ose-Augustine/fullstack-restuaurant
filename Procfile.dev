@@ -1,0 +1,3 @@
+web: rails s
+css: rails tailwindcss:watch
+js: cd react-client && npm run dev 
