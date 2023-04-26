@@ -1,11 +1,8 @@
-
-
+import Hero from "./components/landing-page/hero"
 function App() {
   return (
     <>
-    <div className="text-bold text-red-500">
-      hello new project
-    </div>
+      <Hero />
     </>
   )
 }
