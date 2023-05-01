@@ -1,7 +1,7 @@
 <div>This rendered the index food page</div>
 
 <% @foods.each do |food| %>
-    <%= food.image %>
+    <%= image_tag (food.image), alt: "This is a picture of #{food.name}" %>
 <% end %>
 
     
