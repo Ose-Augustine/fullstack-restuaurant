@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Restaurant
   class Application < Rails::Application
+    # Convert to api only
+    config.api_only = true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
