@@ -28,11 +28,11 @@
 import axios from 'axios'; 
 
 export default function New() {
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        const response = await axios.post('http://localhost:3000/orders/create', formData); 
-        console.log(response.data)
+        axios.post('http://localhost:3000/orders/create', formData); 
+        
     };
   
     return (
