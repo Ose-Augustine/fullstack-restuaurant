@@ -29,7 +29,6 @@ import axios from 'axios';
 
 export default function NewOrder() {
     const handleSubmit = (event) => {
-        event.preventDefault();
         const formData = new FormData(event.target);
         axios.post('http://localhost:3000/orders/create', formData); 
         
