@@ -1,13 +1,11 @@
 class OrdersController < ApplicationController
     def new
-        begin
-            Order.create(
-                food_id: Food.find_by(name: params[:food]).id, 
-                drink_id: Drink.find_by(name: params[:drink]).id
-            )
-        rescue 
-            render 'Check credentials properly', status: :unprocessable_entity
-        end
+        food = Food.find_by(name: params[:food])
+        drink = Drink.find_by(name: params[:drink])
+        Order.create(
+            food_id: food[:id],  
+            drink_id: drink[:id]
+        )
     end
 
     private
