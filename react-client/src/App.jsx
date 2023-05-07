@@ -1,18 +1,19 @@
-import Categories from "./components/landing-page/Categories"
-import FoodsSlide from "./components/landing-page/Foods"
-import FoodInfo from "./components/landing-page/Info"
-import Hero from "./components/landing-page/hero"
-import New from "./components/Orders/New"
-function App() {
+import Index from './landing-page/index';
+import NewOrder from './Orders/New';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+
+export default function App() {
   return (
     <>
-      <Hero />
-      <FoodsSlide />
-      <FoodInfo />
-      <Categories />
-      <New />
+      <Router>
+          <Link to="/orders/create">create order</Link>
+          <Routes>
+            <Route path="/" element={<Index />}></Route>
+            <Route path="/orders/create" element={<NewOrder />}></Route>
+          </Routes>
+      </Router>
     </>
   )
 }
 
-export default App
+

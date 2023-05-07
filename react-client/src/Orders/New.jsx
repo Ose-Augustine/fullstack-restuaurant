@@ -27,7 +27,7 @@
 // }
 import axios from 'axios'; 
 
-export default function New() {
+export default function NewOrder() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);

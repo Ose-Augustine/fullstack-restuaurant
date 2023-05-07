@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     end
 
     private
-    def user_params
+    def user_params 
         params.permit(:food,:drink)
     end
 end
