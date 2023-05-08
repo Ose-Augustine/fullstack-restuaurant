@@ -7,6 +7,27 @@ response.each do |response|
     pictures_urls.push(response["urls"]["small"])
 end 
 
+# Return alcoholic drinks from cocktaildb api
+# Non personal api key "1" provided
+alcohols = HTTParty.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
+alcohols_array = alcohols["drinks"] 
+
+# Create drink object 
+20.times do |n|
+    name = alcohols_array[n]["strDrink"] 
+    info = Faker::Lorem.sentence(word_count: 15) 
+    image = alcohols_array[n]["strDrinkThumb"] 
+    price = alcohols_array[n]["idDrink"] 
+    n += 1
+    Drink.create(
+        name:name,
+        info:info, 
+        image:image, 
+        price:price
+    )
+end
+
+
 # Generate food data 
 20.times do |n|
     name = Faker::Food.dish 
