@@ -1,22 +1,15 @@
-import axios from "axios"
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-export default function DrinksIndex(){
-    const [drinks, setDrinks] = useState(null)
-    async function getDrinks(){
-        try {
-            const response = await axios.get("http://localhost:3000/drinks"); 
-            const data = response.data; 
-            setDrinks([...data]);
-            console.log(drinks); 
-        } catch (err){
-            console.log(err); 
-        }
-    }
+export default function DrinksIndex({ drinks }){
     return(
         <>
-            <div>This is the drinks page</div>
-            <button onClick={getDrinks}>see drinks</button>
+            <div>This is the drinks index page</div>
+            <div>
+                {drinks.map(drink => (
+                    <div key={drink.id}>{drink.name}</div>
+                )
+                )}
+            </div>
         </>
     )
 }
