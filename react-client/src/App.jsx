@@ -1,4 +1,4 @@
-import DrinksIndex from './drinks/index';
+import DrinksMainComp from './drinks/main';
 import Index from './landing-page/index';
 import NewOrder from './Orders/New';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
@@ -11,7 +11,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Index />}></Route>
             <Route path="/orders/create" element={<NewOrder />}></Route>
-            <Route path="/drinks" element={<DrinksIndex />}></Route>
+            <Route path="/drinks" element={<DrinksMainComp />}></Route>
           </Routes>
       </Router>
     </>
