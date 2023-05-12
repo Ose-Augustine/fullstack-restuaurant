@@ -2,9 +2,9 @@
 export default function Hero(){
     return(
         <>
-            <div className="h-screen border-4 border-red-700 flex flex-col">
+            <div className="h-screen  flex flex-col">
                 <header className="h-1/3">Logo</header>
-                <main className="border-2 border-green-500 flex  h-2/3 p-7">
+                <main className="flex  h-2/3 p-7">
                     <div className="flex flex-col justify-evenly w-1/2">
                         <div>
                             <p className="text-red-400 text-8xl ">Dining</p>

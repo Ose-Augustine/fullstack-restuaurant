@@ -1,8 +1,8 @@
 export default function Categories(){
     return (
-        <article className="border-2 border-yellow-400  h-screen bg-black">
+        <article className=" h-screen bg-black">
             {/* the div below would be a marque with dynamic images per component */}
-            <div className="border-4 border-green-600 h-1/3 flex justify-evenly bg-black">
+            <div className="h-1/3 flex justify-evenly bg-black">
                 <img className="" src="./images/pizza-with-tomatoes.jpg" alt="A picture of pizza with tomatoes" />
                 <img className="" src="./images/pizza-with-tomatoes.jpg" alt="A picture of pizza with tomatoes" />
                 <img className="" src="./images/pizza-with-tomatoes.jpg" alt="A picture of pizza with tomatoes" />
