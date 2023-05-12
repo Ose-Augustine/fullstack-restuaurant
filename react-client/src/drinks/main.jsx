@@ -1,5 +1,5 @@
 import DrinksIndex from "./index"; 
-import getAPIData from "../api-connection";
+import getAPIData from "../helpers/api-connection";
 import { useEffect, useState } from "react";
 
 export default function DrinksMainComp (){
@@ -12,7 +12,7 @@ export default function DrinksMainComp (){
     return (
         <>
             <div>this is the drinks main page right</div>
-            <DrinksIndex drinks={drinks} />
+            <DrinksIndex items={drinks} />
         </>
     )
 }
