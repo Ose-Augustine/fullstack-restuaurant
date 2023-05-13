@@ -1,6 +1,5 @@
 import DrinksMainComp from './drinks/main';
 import Index from './landing-page/index';
-import './index.css'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 export default function App() {
