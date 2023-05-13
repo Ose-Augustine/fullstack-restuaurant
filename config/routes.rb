@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :foods
-  post '/orders/create', to: 'orders#new'
-  resources :drinks 
-  root "foods#index"
+  #devise_for :users
+  get '/foods' , to: 'foods#index'
+  get '/drinks', to: 'drinks#index'
+  #root "foods#index"
 end
