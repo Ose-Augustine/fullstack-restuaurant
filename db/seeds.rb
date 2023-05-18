@@ -37,7 +37,7 @@ end
     n += 1
     Food.create(
         name: name,
-        about: info,
+        info: info,
         image:image, 
         category: category
     )
