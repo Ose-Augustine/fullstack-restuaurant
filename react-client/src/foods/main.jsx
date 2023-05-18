@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import getAPIData from "../helpers/api-connection";
-import DrinksIndex from "../drinks";
+import DrinksIndex from "../drinks/index";
 
 export default function FoodsMainComp(){
     const [foods,setFoods] = useState([]); 
