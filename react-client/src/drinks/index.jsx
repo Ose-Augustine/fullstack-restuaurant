@@ -6,6 +6,15 @@ import { orderListState } from "../recoil_state"
 export default function DrinksIndex({ items }){
 
     const [orderLIst, setOrderList]= useRecoilState(orderListState);    
+
+    function handleClick (e)  {
+        
+        const mainContainer = e.currentTarget.parentNode.parentNode; 
+        const drinkName = mainContainer.querySelector('header').textContent; 
+        const price = mainContainer.querySelector('span').textContent;
+        const selectedDrink = [drinkName, price]
+        setOrderList((oldList) => [...oldList, selectedDrink ])
+    }
     
     return(
         <>  
