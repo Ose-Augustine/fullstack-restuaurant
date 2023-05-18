@@ -1,23 +1,15 @@
 /* eslint-disable react/prop-types */
-import { useSetRecoilState } from "recoil"
+import { useRecoilState } from "recoil"
 import { orderListState } from "../recoil_state"
+
 
 export default function DrinksIndex({ items }){
 
-    const setOrders = useSetRecoilState(orderListState); 
+    const [orderLIst, setOrderList]= useRecoilState(orderListState);    
     
-    function addItem(drinkName, drinkPrice) {
-        setOrders((oldOrder) => [
-            ...oldOrder,
-            {
-                drinkName: drinkName,
-                drinkPrice: drinkPrice 
-            }
-        ]);
-    }
-
     return(
-        <>
+        <>  
+            <div>Thisis teh value of recoil {orderLIst}</div>
             <article className="grid grid-cols-5 gap-2 p-4">
                 {items.map(item => (
                     <section className="rounded-lg shadow-xl flex flex-col justify-between" key={item.id}>
@@ -26,7 +18,7 @@ export default function DrinksIndex({ items }){
                             <header className="font-semibold mb-3">{item.name}</header>
                             <p className="mb-2">{item.info}</p>
                             <footer className="flex justify-between">
-                                <button className=" bg-red-400 font-bold text-white rounded-lg px-4" onClick={addItem(item.name, item.price)}>order</button>
+                                <button className=" bg-red-400 font-bold text-white rounded-lg px-4" onClick={handleClick}>order</button>
                                 <span className="text-red-400 font-bold flex justify-between">${item.price}</span>
                             </footer>
                         </main>
